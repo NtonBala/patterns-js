@@ -7,3 +7,4 @@ Project is run in node terminal, to run specific pattern navigate to pattern dir
 **Patterns covered:**
 
 1. [Module pattern](./module/index.md)
+1. [Factory pattern](./factory/index.md)

@@ -1,8 +1,8 @@
 'use strict';
 
-// Module pattern
+// * Module pattern
 
-// The problem:
+// * The problem:
 // var counter = 0;
 
 // var increaseCounter = function () {
