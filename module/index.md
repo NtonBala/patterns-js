@@ -56,7 +56,7 @@ Now we don't have any access to counter variable (neither outside of, nor on `co
 
 ### Fixed Dependencies
 
-Another advantage of module pattern is that we can fix it's dependencies. In order to do it we just need to pass dependency as parameter:
+Another advantage of module pattern is that we can strictly indicate it's dependencies. In order to do it we just need to pass dependency as parameter:
 
 ```js
 var xxxModule = (function (jQ) {
@@ -65,3 +65,7 @@ var xxxModule = (function (jQ) {
 ```
 
 Notice, that we can define any name for our dependency. E.g. if `$` variable is already in use.
+
+## Summing-up
+
+Module pattern allows to isolate functions, variables and objects protecting code from breaking (isolated entities are unreachable from outside). Module also allows to strictly indicate its dependencies.
