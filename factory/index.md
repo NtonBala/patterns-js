@@ -84,3 +84,10 @@ Factory pattern should be used when object creation logic in the constructor is 
 It is also useful when you need to create many objects of the same type.
 
 > At the same time, factory pattern can bring over complexity to the app if you use it unnecessarily.
+
+## Summing-up
+
+Factory pattern allows to create objects hiding implementation details from the user. Typical use cases are:
+
+1. object creation logic in the constructor is very complex (e.g. objects are created from several sources)
+1. we need to create many objects of the same type
