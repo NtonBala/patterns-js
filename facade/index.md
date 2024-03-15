@@ -84,8 +84,12 @@ class Credit {
 }
 ```
 
-In the `applyFor` method we created new instances of classes and called the necessary methods to obtain user, credit and credit history results. Then we generated a loan result message.
+In the `applyFor` method we've created new instances of classes and called the necessary methods to obtain user, credit and credit history results. Then we generated a loan result message.
 
-So what are the pros and cons of this pattern?
+**So what are the pros and cons of this pattern?**
 
 > The advantage is that when providing a simple interface to a complex code it is easier to work with and to reuse. But by creating a facade we create another abstraction and perhaps it is not always needed.
+
+## Summing-up
+
+Facade pattern is about creating a simple interface to a large, complex piece of code in order to hide it's complexity.
