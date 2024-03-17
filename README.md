@@ -9,10 +9,10 @@ Project is run in node terminal, to run specific pattern navigate to pattern dir
 1. [Module](./module/index.md)
 1. [Factory](./factory/index.md)
 1. [Facade](./facade/index.md)
+1. [Decorator](./decorator/index.md)
 
 **Patterns to cover:**
 
-1. [Decorator](https://monsterlessons.com/project/lessons/decorator-pattern-v-javascript)
 1. [Observer](https://monsterlessons.com/project/lessons/observer-pattern-v-javascript)
 1. [Singleton](https://monsterlessons.com/project/lessons/singleton-pattiern-v-javascript)
 1. [PubSub](https://monsterlessons.com/project/lessons/publishsubscribe-v-javascript) (publish/subscribe)
