@@ -58,3 +58,59 @@ observer.broadcast({ someData: 'hello' });
 // -> subscribe for module 1 fired { someData: 'hello' }
 // -> subscribe for module 2 fired { someData: 'hello' }
 ```
+
+Let's try it with a real example. We want to have 2 components: in one we will enter data and the other will display the number of words entered.
+
+> [!NOTE]
+> To run an example open `./index.html` in the browser.
+
+First let's add a couple of elements to the markup:
+
+```html
+<textarea class="textField"></textarea>
+<div>
+  Words Count:
+  <span class="countField"></span>
+</div>
+```
+
+Now let's create an observer and find both elements:
+
+```js
+const blogObserver = new EventObserver();
+
+const textField = document.querySelector('.textField');
+const countField = document.querySelector('.countField');
+```
+
+Now we need to subscribe to our blogObserver:
+
+```js
+blogObserver.subscribe((text) => {
+  console.log('broadcast caught');
+});
+```
+
+And fire `broadcast` when user changes input field:
+
+```js
+textField.addEventListener('keyup', () => {
+  blogObserver.broadcast(textField.value);
+});
+```
+
+To count words we can wright a helper function:
+
+```js
+const getWordsCount = (text) => (text ? text.trim().split(/\s+/).length : 0);
+```
+
+And call it inside our subscriber:
+
+```js
+blogObserver.subscribe((text) => {
+  countField.innerHTML = getWordsCount(text);
+});
+```
+
+This small example perfectly shows how observer pattern works. First we create a new instance of the observer class, for example for a field component. Then in various components we can subscribe to broadcast of this observer. Now all our components are synchronized and change simultaneously when data changes.

@@ -19,14 +19,17 @@ class EventObserver {
   }
 }
 
-const observer = new EventObserver();
+const blogObserver = new EventObserver();
 
-observer.subscribe((data) => {
-  console.log('subscribe for module 1 fired', data);
+const textField = document.querySelector('.textField');
+const countField = document.querySelector('.countField');
+
+const getWordsCount = (text) => (text ? text.trim().split(/\s+/).length : 0);
+
+blogObserver.subscribe((text) => {
+  countField.innerHTML = getWordsCount(text);
 });
-observer.subscribe((data) => {
-  console.log('subscribe for module 2 fired', data);
+
+textField.addEventListener('keyup', () => {
+  blogObserver.broadcast(textField.value);
 });
-observer.broadcast({ someData: 'hello' });
-// -> subscribe for module 1 fired { someData: 'hello' }
-// -> subscribe for module 2 fired { someData: 'hello' }
