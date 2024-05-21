@@ -5,22 +5,33 @@ const Track = function (name) {
   this.name = name;
 };
 
-Track.prototype.getName = function () {
-  return this.name;
-};
-Track.prototype.play = function () {
-  console.log(this.name + ' started playing');
-};
+// Track.prototype.getName = function () {
+//   return this.name;
+// };
+// Track.prototype.play = function () {
+//   console.log(this.name + ' started playing');
+// };
 
 const Playlist = function (name) {
   this.name = name;
 };
 
-Playlist.prototype.getName = function () {
-  return this.name;
+// Playlist.prototype.getName = function () {
+//   return this.name;
+// };
+// Playlist.prototype.play = function () {
+//   console.log(this.name + ' started playing');
+// };
+
+const nameMixin = {
+  getName: function () {
+    return this.name;
+  },
 };
-Playlist.prototype.play = function () {
-  console.log(this.name + ' started playing');
+const controlsMixin = {
+  play: function () {
+    console.log(this.name + ' started playing');
+  },
 };
 
 const superTrack = new Track('Super track');
