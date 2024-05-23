@@ -21,9 +21,12 @@ Project is run in node terminal: to execute a specific pattern run `node ${patte
 
 ## Functional JS
 
-**Techniques to cover:**
+**Techniques covered:**
 
 1. [Mixins](./mixins/index.md)
+
+**Techniques to cover:**
+
 1. [Currying](https://monsterlessons.com/project/lessons/karrirovanie-currying-v-javascript)
 1. [`curry` function](https://monsterlessons.com/project/lessons/pishem-funkciyu-curry-v-javascript)
 
