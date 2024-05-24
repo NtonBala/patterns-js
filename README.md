@@ -32,4 +32,6 @@ Project is run in node terminal: to execute a specific pattern run `node ${patte
 
 > Note that any pattern can bring over complexity to your code if used unnecessarily.
 
-Project is based on [Monster Lessons](https://monsterlessons.com/project/categories/javascript) online JS lessons, [Refactoring Guru](https://refactoring.guru/): the one-man band behind - Alexander Shvets and [Design Patterns — easier than simple](https://sites.google.com/site/designpatternseasy/) book by Andriy Buday.
+Project is based on [Monster Lessons](https://monsterlessons.com/project/categories/javascript) online JS lessons.
+
+Additional knowledge can be found in [Refactoring Guru](https://refactoring.guru/): the one-man band behind - Alexander Shvets and [Design Patterns — easier than simple](https://sites.google.com/site/designpatternseasy/) book by Andriy Buday.
