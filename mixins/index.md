@@ -58,3 +58,5 @@ $.extend(Playlist.prototype, nameMixin, controlsMixin);
 ```
 
 The code works the same, but now we've extracted the code that is duplicated to mixins. If we check `superTrack` object we'll see that it has only one own property `name`. `getName` and `play` are mixed to its prototype that allows `Track` instance to call them.
+
+## Extend Function
