@@ -28,7 +28,7 @@ console.log(getCounter()); // NaN
 
 ## Solution
 
-When we use _module pattern_ we create anonymous "self-invoking" function that allows to preserve all the data inside it and make for it simple public API:
+When we use _module pattern_ we create anonymous "self-invoking" function that allows us to store inside it all the data we need and make for that data a simple public API:
 
 ```js
 var counterModule = (function () {
@@ -50,9 +50,9 @@ console.log(counterModule.getCounter()); // 1
 console.log(counter); // ReferenceError: counter is not defined
 ```
 
-Now we don't have any access to counter variable (neither outside of, nor on `counterModule`).
+Now we don't have any access to counter variable (neither outside the module, nor via `counterModule` object).
 
-> Module pattern allows us to isolate functions and objects protecting code from breaking.
+> Module pattern allows us to isolate functions and objects protecting code from being broken down.
 
 ### Fixed Dependencies
 
@@ -64,8 +64,8 @@ var xxxModule = (function (jQ) {
 })(jQuery);
 ```
 
-Notice, that we can define any name for our dependency. E.g. if `$` variable is already in use.
+Notice, that inside module we can define any name for our dependency (e.g. if `$` variable is already in use).
 
 ## Summing-up
 
-Module pattern allows to isolate functions, variables and objects protecting code from breaking (isolated entities are unreachable from outside). Module also allows to strictly indicate its dependencies.
+Module pattern allows to create private functions and variables, protecting code from being broken down (isolated entities are unreachable from outside). Module also allows to strictly indicate its dependencies.
