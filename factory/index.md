@@ -31,9 +31,9 @@ class Employee {
 }
 ```
 
-Here we create by type different class instances, hiding from the user what class we are using to create an instance. In the end we get an object with required fields and `say` method.
+Depending on the type we create here different class instances, hiding from the user what class we are using to create an instance. In the end we get an object with the fields we need and `say` method.
 
-Now we need to create missing classes:
+Let's create missing classes:
 
 ```js
 class Fulltime {
@@ -79,15 +79,13 @@ contractor?.say(); // contractor: rate $15/hour
 
 **When to use Factory pattern**
 
-Factory pattern should be used when object creation logic in the constructor is very complex. Most often when object can be created from several sources.
+Factory pattern should be used when object creation logic in the constructor is of high complexity. Most often this happens when object can be created from several sources.
 
-It is also useful when you need to create many objects of the same type.
+It is also useful when you need to create many objects with the same fields.
 
-> At the same time, factory pattern can bring over complexity to the app if you use it unnecessarily.
+> [!CAUTION]
+> At the same time, factory pattern can bring over complexity to the app if used unnecessarily.
 
 ## Summing-up
 
-Factory pattern allows to create objects hiding implementation details from the user. Typical use cases are:
-
-1. object creation logic in the constructor is very complex (e.g. objects are created from several sources)
-1. we need to create many objects of the same type
+Factory pattern allows to create objects hiding implementation details from the user. It is useful when object creation logic in the constructor is of high complexity (e.g. objects are created from several sources) or we need to create many objects of with the same fields.

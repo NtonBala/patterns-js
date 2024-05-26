@@ -7,7 +7,7 @@ Project is run in node terminal: to execute a specific pattern run `node ${patte
 **Patterns covered:**
 
 1. [Module](./module/index.md 'Allows to create private variables and functions. Also allows to strictly indicate its own dependencies.')
-1. [Factory](./factory/index.md 'Allows to create objects, hiding implementation details from the user. E.g. when object creation logic is very complex (objects are created from several sources) or you need to create many objects of the same type.')
+1. [Factory](./factory/index.md 'Allows to create objects, hiding implementation details from the user. E.g. when object creation logic is of high complexity (objects are created from several sources) or you need to create many objects with the same fields.')
 1. [Facade](./facade/index.md 'Is about creating a simple interface to a large, complex piece of code in order to hide its complexity.')
 1. [Decorator](./decorator/index.md 'Allows to dynamically add new behavior to objects, avoiding creating a number of subclasses and changing default behavior.')
 1. [Observer](./observer/index.md 'Observer pattern allows different parts of application respond to various events by creating _one-to-many_ relations between components.')
