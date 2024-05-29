@@ -24,7 +24,7 @@ const coffee = new Coffee();
 console.log(coffee.cost()); // -> 5
 ```
 
-Now let's add `sugar` decorator that will add sugar to the coffee changing its price. Our decorator should be called as a function that accepts our object as parameter:
+Now let's create `sugar` decorator that will add sugar to the coffee changing its price. Our decorator should be called as a function that accepts our object as parameter:
 
 ```js
 const coffee = new Coffee();
@@ -44,7 +44,7 @@ const sugar = (coffee) => {
 };
 ```
 
-Inside `sugar` function we received the cost and overrided the `cost` method so that it will now return the new cost including sugar.
+Inside `sugar` function we received the cost and overrode the `cost` method so that it will now return the new cost including sugar.
 
 > The decorator mutated the object passed into it, but we can still create basic class instances since we didn't change the superclass.
 
@@ -91,3 +91,7 @@ console.log(coffee.cost()); // -> 7
 ```
 
 So, with decorator pattern we can add new behavior to our objects without having to modify the default behavior. We also avoid the need to create a huge number of subclasses.
+
+## Summing-up
+
+Decorator allows to _dynamically_ add new behavior (properties and methods) to objects, avoiding creating a number of subclasses and changing default behavior. Decorator mutates object under the hood.
