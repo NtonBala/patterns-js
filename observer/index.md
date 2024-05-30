@@ -4,7 +4,7 @@
 
 A common problem during development that we face is when different parts of application have to respond to various events. E.g. the user has entered some text and we need to change some components. And all this is quite difficult to synchronize.
 
-Observer pattern can help us with this. It allows to create _one-to-many relation_ between components.
+Observer pattern can help us with this. It allows to create _one-to-many_ relation between components.
 
 Let's say we want to implement a class that will have next methods:
 
@@ -114,3 +114,7 @@ blogObserver.subscribe((text) => {
 ```
 
 This small example perfectly shows how observer pattern works. First we create a new instance of the observer class, for example for a field component. Then in various components we can subscribe to broadcast of this observer. Now all our components are synchronized and change simultaneously when data changes.
+
+## Summing-up
+
+Observer pattern allows different parts of application respond to various events. It synchronizes components by creating _one-to-many_ relations between them.
